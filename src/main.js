@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
+import vuetify from './plugins/vuetify'
 import VueRouter from 'vue-router'
-import Vuesax from 'vuesax'
-import 'vuesax/dist/vuesax.css'
+import 'boxicons'
 
 import Home from './views/Home.vue'
-import About from './views/About.vue'
+import Castle from './views/Castle.vue'
+import Cep from './views/Cep.vue'
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
-Vue.use(Vuesax)
 
 const router = new VueRouter({
   mode: 'history',
@@ -25,13 +25,18 @@ const router = new VueRouter({
       component: Home
     },
     {
-      path: '/about',
-      component: About
+      path: '/castle',
+      component: Castle
+    },
+    {
+      path: '/cep',
+      component: Cep
     }
   ]
 })
 
 new Vue({
   router,
+  vuetify,
   render: h => h(App),
 }).$mount('#app')

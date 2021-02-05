@@ -1,8 +1,6 @@
 <template>
   <div class="home">
     This is a home page.
-
-    <vs-button>Active</vs-button>
   </div>
 </template>
 
